@@ -1,7 +1,11 @@
 package com.sgraphwebsite.repository;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.sgraphwebsite.entity.Book;
+import com.sgraphwebsite.entity.User;
 
-public interface UserRepository extends JpaRepository<Book, Integer> {}
+public interface UserRepository extends JpaRepository<User, Integer> {
+	Optional<User> findByEmail(String email);
+}

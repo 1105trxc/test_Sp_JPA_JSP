@@ -1,13 +1,15 @@
 package com.sgraphwebsite.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sgraphwebsite.repository.BookRepository;
+import com.sgraphwebsite.repository.RatingRepository;
 
 @Service
 public class RatingService {
-    @Autowired
-    private RatingService ratingRepository;
-    // Business Logic
+    private final RatingRepository ratingRepository;
+
+    public RatingService(RatingRepository ratingRepository) {
+        this.ratingRepository = ratingRepository;
+    }
+    // Business Logic methods can be added here
 }

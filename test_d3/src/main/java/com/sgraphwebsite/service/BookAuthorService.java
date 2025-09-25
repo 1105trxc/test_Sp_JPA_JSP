@@ -1,13 +1,15 @@
 package com.sgraphwebsite.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sgraphwebsite.repository.BookRepository;
+import com.sgraphwebsite.repository.BookAuthorRepository;
 
 @Service
 public class BookAuthorService {
-    @Autowired
-    private BookAuthorService bookAuthorRepository;
-    // Business Logic
+    private final BookAuthorRepository bookAuthorRepository;
+
+    public BookAuthorService(BookAuthorRepository bookAuthorRepository) {
+        this.bookAuthorRepository = bookAuthorRepository;
+    }
+    // Add business logic methods as needed
 }
