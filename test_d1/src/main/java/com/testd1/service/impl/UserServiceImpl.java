@@ -3,7 +3,7 @@ package com.testd1.service.impl;
 import org.springframework.stereotype.Service;
 
 import com.testd1.entity.User;
-import com.testd1.repository.UserRepository;
+import com.testd1.repository.UserRepository_23110243;
 import com.testd1.service.UserService;
 
 import java.util.Optional;
@@ -11,9 +11,9 @@ import java.util.Optional;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private final UserRepository repo;
+    private final UserRepository_23110243 repo;
 
-    public UserServiceImpl(UserRepository repo) {
+    public UserServiceImpl(UserRepository_23110243 repo) {
         this.repo = repo;
     }
 

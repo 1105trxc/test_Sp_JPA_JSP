@@ -13,6 +13,9 @@
     <nav>
         <a style="color:#fff;margin-right:12px" href="${pageContext.request.contextPath}/">Trang Chủ</a>
         <a style="color:#fff;margin-right:12px" href="${pageContext.request.contextPath}/products">Sản phẩm</a>
+        <c:if test="${not empty sessionScope.currentUser}">
+            <a style="color:#fff;margin-right:12px" href="${pageContext.request.contextPath}/categories">Categories</a>
+        </c:if>
         <c:choose>
             <c:when test="${empty sessionScope.currentUser}">
                 <a style="color:#fff;margin-right:12px" href="${pageContext.request.contextPath}/login">Đăng nhập</a>

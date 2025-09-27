@@ -1,5 +1,11 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:if test="${not empty msg}">
+    <div style="color:#198754;margin-bottom:8px;">${msg}</div>
+</c:if>
+<c:if test="${not empty error}">
+    <div style="color:#dc3545;margin-bottom:8px;">${error}</div>
+</c:if>
 <h2>Quản trị Videos</h2>
 
 <div style="display:grid;grid-template-columns:1fr 2fr;gap:16px;">

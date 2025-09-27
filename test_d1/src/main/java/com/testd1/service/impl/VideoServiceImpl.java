@@ -5,7 +5,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.testd1.entity.Video;
-import com.testd1.repository.VideoRepository;
+import com.testd1.repository.VideoRepository_23110243;
 import com.testd1.service.VideoService;
 
 import java.util.Optional;
@@ -13,9 +13,9 @@ import java.util.Optional;
 @Service
 public class VideoServiceImpl implements VideoService {
 
-    private final VideoRepository repo;
+    private final VideoRepository_23110243 repo;
 
-    public VideoServiceImpl(VideoRepository repo) {
+    public VideoServiceImpl(VideoRepository_23110243 repo) {
         this.repo = repo;
     }
 
