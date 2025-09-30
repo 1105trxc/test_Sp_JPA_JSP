@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         version="6.0">
+
+  <display-name>D2 - Servlet JPA JSP</display-name>
+
+  <!-- UTF-8 -->
+  <filter>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <async-supported>true</async-supported>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!-- Sitemesh 3 -->
+  <filter>
+    <filter-name>sitemesh</filter-name>
+    <filter-class>org.sitemesh.config.ConfigurableSiteMeshFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>sitemesh</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!-- Listener seeding dữ liệu -->
+  <listener>
+    <listener-class>testd2.AppInitializer</listener-class>
+  </listener>
+
+  <!-- Servlet khai báo bằng annotation @WebServlet, nên không cần khai ở đây -->
+
+  <welcome-file-list>
+    <welcome-file>home</welcome-file>
+  </welcome-file-list>
+</web-app>

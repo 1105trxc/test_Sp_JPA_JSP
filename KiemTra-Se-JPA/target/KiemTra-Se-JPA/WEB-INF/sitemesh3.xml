@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+  <mapping path="/seller/*" decorator="seller.jsp" />
+  <mapping path="/*" decorator="user.jsp" />
+  <excludes>
+    <pattern>/WEB-INF/decorators/*</pattern>
+    <pattern>/assets/*</pattern>
+  </excludes>
+</sitemesh>
